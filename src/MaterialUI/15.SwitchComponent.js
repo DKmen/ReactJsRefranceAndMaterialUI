@@ -6,7 +6,7 @@ import {
   Box,
   FormControl,
   FormLabel,
-  Checkbox,
+  Switch,
   FormControlLabel,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -23,24 +23,22 @@ const useStyles = makeStyles((them) => {
   };
 });
 
-export default function CheckBoxComponent(props) {
+export default function SwitchComponent(props) {
   const classes = useStyles();
 
-
   const [check, setCheck] = React.useState();
- 
-  
+  console.log(check)
   return (
     <>
       <Container className={classes.root}>
-        <Typography variant="h2">Form Check Box</Typography>
+        <Typography variant="h2">Form Switch Component</Typography>
         <Box m={4}>
           <FormControl>
             <FormLabel>Chose gender</FormLabel>
             <FormControlLabel
               label="aggre terms and condition"
               control={
-                <Checkbox icon={<BookmarkBorderOutlinedIcon/>} checkedIcon={<BookmarkOutlinedIcon/>} onChange={(event) => setCheck(event.target.checked)} />
+                <Switch icon={<BookmarkBorderOutlinedIcon/>} checkedIcon={<BookmarkOutlinedIcon/>} onChange={(event) => setCheck(event.target.checked)} />
               }
             />
           </FormControl>
