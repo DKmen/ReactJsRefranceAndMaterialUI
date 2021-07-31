@@ -24,7 +24,7 @@ export default function RadioButtonComponent(props) {
 
   const [gender,setGender]=React.useState('male');
   const selectGender=(event)=>setGender(event.target.value);
-  console.log(gender);
+  
   return (
     <>
       <Container className={classes.root}>
